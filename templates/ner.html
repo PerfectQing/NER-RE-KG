@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>NER Process Page</h1>
+
+<h2>Please input a sentence that is related to stem cell.</h2>
+<h3>Example: Histone deacetylase activity required for embryonic stem cell differentiation.</h3>
+
+<form method="post">
+    <!-- <input type="text" name="input_text" class="input_submit" placeholder="例：我是庞国庆，我在苏州科技大学读研。"> -->
+    <input type="text" name="input_text_ner" class="input_submit"
+        placeholder="Example: Histone deacetylase activity required for embryonic stem cell differentiation.">
+    <button type="submit" id="btn_search" name="btn" onclick="oops()" class="btn_submit">Oops 一下</button>
+</form>
+<div class="show_result">
+    <form method="get">
+        <div class="initial_input">
+            <input type="text" name="" id="" value="INPUT: " class="res_label">
+            <input type="text" name="input_text_show" class="res_text" value="{{input_text_ner}}"
+                placeholder="Histone deacetylase activity required for embryonic stem cell differentiation.">
+        </div>
+        <div class="initial_input">
+            <input type="text" name="" id="" value="ENTITIES: " class="res_label">
+
+            <input type="text" name="res_text_ner" class="res_text" value="{{processed_text_ner}}" placeholder="embryonic stem cell">
+        </div>
+    </form>
+</div>
+{% endblock %}

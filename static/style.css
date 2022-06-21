@@ -1,0 +1,248 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    background: gainsboro;
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+}
+
+header {
+    background: #2c3e50;
+    height: 80px;
+    width: 100%;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* text-align: center; */
+    align-items: center;
+    /* justify-content: center; */
+    display: flex;
+    flex-direction: row;
+}
+
+
+header .title {
+    width: 220px;
+    height: 100%;
+    background: rebeccapurple;
+    padding-left: 20px;
+    display: block;
+}
+
+header .title a {
+    display: block;
+    width: 220px;
+    height: 100px;
+}
+
+header .title:hover {
+	cursor: pointer;
+}
+
+
+header .welcome {
+    color: white;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    /* margin-top: 10px; */
+    padding-top: 6px;
+}
+
+header .oops {
+    color: white;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 8px auto 0 auto;
+}
+
+
+header .function {
+
+    height: 100%;
+    background: #2c3e50;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 20px;
+    margin-left: 20px;
+    /* display: inline-block; */
+    align-items: center;
+    align-content: center;
+}
+
+
+
+header .function ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .function li {
+    /* padding: 0 20px; */
+    list-style: none;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    display: flex;
+    height: 100%;
+}
+
+.function a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+header .function ul :hover {
+    background: #2b9676;
+}
+
+
+header .img-head {
+    margin: auto 30px auto auto;
+}
+header .img-head img {
+    width: auto;
+    height: 80px;
+    /* line-height: 100px; */
+}
+
+
+.content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    background: #2c3e5000;
+    flex-direction: column;
+}
+
+.content h1 {
+    margin: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;
+    color: #2b9676;
+}
+
+.content .btn {
+    width: 200px;
+    height: 60px;
+    color: darkcyan;
+    background: none;
+    border: solid 1px #7590ac;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.content .btn:hover {
+    width: 200px;
+    height: 60px;
+    color: white;
+    background: #2b9676;
+    border-radius: 10px;
+    cursor: auto;
+}
+
+.content .btn_submit {
+    width: 120px;
+    height: 50px;
+    color: darkcyan;
+    background: none;
+    border: solid 1px whitesmoke;
+    border-radius: 4px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.content .btn_submit:hover {
+    width: 120px;
+    height: 50px;
+    color: white;
+    background: #2b9676;
+    border-radius: 4px;
+    cursor: auto;
+}
+
+.content .input_submit {
+    outline: none;
+    width: 800px;
+    height: 50px;
+    color: #2b9676;
+    background: none;
+    border: solid 1px whitesmoke;
+    border-radius: 4px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.content .input_submit::shadow {
+
+    width: 800px;
+    height: 50px;
+    color: #2b9676;
+    background: none;
+    border: solid 1px #415468;
+    border-radius: 4px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.oops_one {
+    margin-top: 100px;
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.oops_one a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    /* color: #2c3e50; */
+    line-height: 60px;
+}
+
+.oops_one .btn {
+    margin: auto 20px;
+    border: solid 1px rebeccapurple;
+    color: rebeccapurple;
+    justify-content: center;
+    align-items: center;
+}
+
+.oops_one .btn:hover {
+    margin: auto 20px;
+    border: solid 1px whitesmoke;
+    background: rebeccapurple;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+footer {
+    background: #2c3e50;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
