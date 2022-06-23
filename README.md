@@ -15,3 +15,6 @@ You should submit your own `model` parameters, `tokenizer` and change some code 
 
 ## Others are didn't finish yet
 Going...
+
+## Oops once
+Currently, you can try this on http://121.89.220.9:8080
