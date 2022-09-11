@@ -7,8 +7,9 @@ import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 
-tokenizer = AutoTokenizer.from_pretrained('/root/pgq/model_saved/StemCell')
-model = AutoModelForTokenClassification.from_pretrained('/root/pgq/model_saved/StemCell')
+
+tokenizer = AutoTokenizer.from_pretrained('model_saved/bert-tiny-finetuned-ner')
+model = AutoModelForTokenClassification.from_pretrained('model_saved/bert-tiny-finetuned-ner')
 
 label2id = {
     '[PAD]': 0,
@@ -32,10 +33,10 @@ id2label = {
 
 
 def predict(sent):
-    tokenized_sent = tokenizer(sent)
-    sent_tokens = tokenizer.convert_ids_to_tokens(tokenized_sent.input_ids)
+    tokenized_sent = tokenizer(sent, return_tensors='pt')
+    sent_tokens = tokenizer.convert_ids_to_tokens(tokenized_sent['input_ids'][0])
     # print(sent_tokens)
-    preds = model(torch.tensor(tokenized_sent.input_ids).unsqueeze(0)).logits.detach().numpy()
+    preds = model(**tokenized_sent).logits.detach().numpy()
     # print(preds)
     valid_words = []
     valid_entities = []
@@ -72,7 +73,7 @@ def predict(sent):
     
 sent_sample = 'This is a very useful stem cell on our body.'
 sent_sample = 'Histone deacetylase activity required for embryonic stem cell differentiation .'
-predict(sent_sample)
+print(predict(sent_sample))
 # outputs = trainer.predict(test_dataset)
 
 
