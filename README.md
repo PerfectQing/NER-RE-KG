@@ -2,8 +2,8 @@
 A visual online named entity recognition(Relation extraction, Knowledge graph) website, currently only implements the function of NER.
 
 # Attention
-There miss an `pytorch_model.bin` under `model_saved` folder.
-You should submit your own `model` parameters, `tokenizer` and change some code of this project.
+There miss a proper `pytorch_model.bin` under `model_saved` folder.
+You should submit your own `model` parameters, `tokenizer` to replace the folder and change some code of this project by youself.
 
 
 # Page Display
