@@ -17,4 +17,4 @@ You should submit your own `model` parameters, `tokenizer` to replace the folder
 Going...
 
 ## Oops once
-Currently, you can try this on http://121.89.220.9:8080
+Currently, you can try this on http://43.142.185.222:8080/
