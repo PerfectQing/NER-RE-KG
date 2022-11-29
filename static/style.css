@@ -42,7 +42,7 @@ header .title a {
 }
 
 header .title:hover {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 
@@ -107,13 +107,14 @@ header .function li {
 }
 
 header .function ul :hover {
-    background: #2b9676;
+    background: #008c8c;
 }
 
 
 header .img-head {
     margin: auto 30px auto auto;
 }
+
 header .img-head img {
     width: auto;
     height: 80px;
@@ -136,15 +137,15 @@ header .img-head img {
     margin: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 50px;
-    color: #2b9676;
+    color: #008c8c;
 }
 
 .content .btn {
     width: 200px;
     height: 60px;
-    color: darkcyan;
+    color: #008c8c;
     background: none;
-    border: solid 1px #7590ac;
+    border: solid 1px #008c8c;
     border-radius: 10px;
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
@@ -154,7 +155,7 @@ header .img-head img {
     width: 200px;
     height: 60px;
     color: white;
-    background: #2b9676;
+    background: #008c8c;
     border-radius: 10px;
     cursor: auto;
 }
@@ -162,7 +163,7 @@ header .img-head img {
 .content .btn_submit {
     width: 120px;
     height: 50px;
-    color: darkcyan;
+    color: #008c8c;
     background: none;
     border: solid 1px whitesmoke;
     border-radius: 4px;
@@ -174,7 +175,7 @@ header .img-head img {
     width: 120px;
     height: 50px;
     color: white;
-    background: #2b9676;
+    background: #008c8c;
     border-radius: 4px;
     cursor: auto;
 }
@@ -183,7 +184,7 @@ header .img-head img {
     outline: none;
     width: 800px;
     height: 50px;
-    color: #2b9676;
+    color: #008c8c;
     background: none;
     border: solid 1px whitesmoke;
     border-radius: 4px;
@@ -195,7 +196,7 @@ header .img-head img {
 
     width: 800px;
     height: 50px;
-    color: #2b9676;
+    color: #008c8c;
     background: none;
     border: solid 1px #415468;
     border-radius: 4px;
@@ -245,4 +246,42 @@ footer {
     justify-content: center;
     align-items: center;
     color: white;
+}
+
+
+
+
+/* KG */
+
+.g6-tooltip {
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #10259c;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 8px;
+    box-shadow: rgb(174, 174, 174) 0px 0px 10px;
+}
+
+#main {
+    display: flex;
+    margin-top: 20px;
+}
+
+#mountNode {
+    background: none;
+    display: flex;
+}
+
+#relatedInfo {
+    width: 300px;
+    height: 650px;
+    background: #008c8c;
+    display: inline-block;
+    color: aliceblue;
+    padding-left: 5px;
+}
+
+#relatedInfo h3{
+    margin: 10px auto 2px auto;
 }

@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
 from codes.ner import predict
+from markupsafe import Markup
 
 app = Flask(__name__)
 
@@ -40,7 +41,8 @@ def ner_process():
         processed_text_ner = ''
     # if request.method == 'GET':
         # request.form['res_text_ner'] = processed_text
-    return render_template('ner.html', html_id_css=html_id_css, processed_text_ner=processed_text_ner, input_text_ner=input_text_ner)
+    # Markup(processed_text_ner)
+    return render_template('ner.html', html_id_css=html_id_css, processed_text_ner=Markup(processed_text_ner * 10), input_text_ner=input_text_ner)
 
 
 
@@ -53,6 +55,7 @@ def re_process():
         processed_text = process(input_text)
         
     return render_template('re.html', html_id_css=html_id_css, processed_text=processed_text)
+
 @app.errorhandler(405)
 def not_found(error):
     
@@ -67,11 +70,19 @@ def not_found(error):
     # return render_template('error.html', ), 405
     return render_template('404.html', res_text=processed_text)
 
-
-@app.route('/kg')
+@app.route('/kg', methods=['GET', 'POST'])
 def kg_process():
     html_id_css = 'kg.css'
-    return render_template('kg.html', html_id_css=html_id_css)
+    processed_text_re = ''
+    if request.method == 'POST':
+        input_text_kg = request.form['input_text_kg']
+        # processed_text_re = process(input_text)
+        print(input_text_kg)
+        processed_text_re = input_text_kg
+    else:
+        print('Nothing')
+    return render_template('kg.html', html_id_css=html_id_css, processed_text_re=processed_text_re)
+
 if __name__ == '__main__':
     # app.run(debug=True)
     app.run(port=8080, host='0.0.0.0', debug=True)

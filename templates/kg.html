@@ -1,76 +1,19 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>KG Process Page</h1>
+<h1>KG Page</h1>
 <form method="post">
-    <input type="text" name="input_text" class="input_submit" placeholder="例：特朗普">
-    <button type="submit" id="btn_search" name="btn" onclick="oops()" class="btn_submit">Oops 一下</button>
+  <input type="text" name="input_text_kg" class="input_submit" placeholder="例：我是大帅比">
+  <button type="submit" id="btn_search" name="btn" onclick="oops()" class="btn_submit">Oops 一下</button>
 </form>
-<div id="main" style="width: 600px;height:400px;"></div>
-<script type="text/javascript">
-    import * as echarts from 'echarts';
-
-var ROOT_PATH = 'https://echarts.apache.org/examples';
-
-var chartDom = document.getElementById('main');
-var myChart = echarts.init(chartDom);
-var option;
-
-myChart.showLoading();
-$.getJSON(ROOT_PATH + '/data/asset/data/les-miserables.json', function (graph) {
-  myChart.hideLoading();
-  graph.nodes.forEach(function (node) {
-    node.label = {
-      show: node.symbolSize > 30
-    };
-  });
-  option = {
-    title: {
-      text: 'Les Miserables',
-      subtext: 'Default layout',
-      top: 'bottom',
-      left: 'right'
-    },
-    tooltip: {},
-    legend: [
-      {
-        // selectedMode: 'single',
-        data: graph.categories.map(function (a) {
-          return a.name;
-        })
-      }
-    ],
-    animationDuration: 1500,
-    animationEasingUpdate: 'quinticInOut',
-    series: [
-      {
-        name: 'Les Miserables',
-        type: 'graph',
-        layout: 'none',
-        data: graph.nodes,
-        links: graph.links,
-        categories: graph.categories,
-        roam: true,
-        label: {
-          position: 'right',
-          formatter: '{b}'
-        },
-        lineStyle: {
-          color: 'source',
-          curveness: 0.3
-        },
-        emphasis: {
-          focus: 'adjacency',
-          lineStyle: {
-            width: 10
-          }
-        }
-      }
-    ]
-  };
-  myChart.setOption(option);
-});
-
-option && myChart.setOption(option);
-</script>
+<div id="main">
+  <div id="mountNode" style="width: auto; height: auto;"></div>
+  <div id="relatedInfo">
+    <h3>Related Paper: </h3>
+    <p>Paper 1</p>
+    <p>{{processed_text_re}}</p>
+  </div>
+</div>
+<script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-4.2.3/dist/g6.min.js"></script>
+<script src="../static/index.js"></script>
 {% endblock %}

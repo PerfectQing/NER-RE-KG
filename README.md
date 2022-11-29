@@ -1,5 +1,5 @@
 # NER-RE-KG
-A visual online named entity recognition(Relation extraction, Knowledge graph) website, currently only implements the function of NER.
+A visual online Named Entity Recognition(Relation extraction, Knowledge graph) website, currently only implements the function of NER.
 
 # Attention
 There miss a proper `pytorch_model.bin` under `model_saved` folder.
@@ -17,4 +17,4 @@ You should submit your own `model` parameters, `tokenizer` to replace the folder
 Going...
 
 ## Oops once
-Currently, you can try this on http://121.89.220.9:8080
+Currently, you can try this on http://43.142.185.222:8080/

@@ -66,8 +66,12 @@ def predict(sent):
         valid_entities_line = ', '.join(valid_entities)
     else:
         valid_entities_line = 'No entities found.'
+    splits_words = valid_entities_line.split(' ')
+    return_line = ''
+    for word in splits_words:
+        return_line += '<p>' + word + '</p>'
 
-    return valid_entities_line
+    return return_line
     # print(valid_entities)
     # # print(preds[0][0], len(preds[0][0]))
     
