@@ -2,13 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- <meta charset="UTF-8"> -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" /> -->
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
     <title>Oops NLP</title>
     <title>{% block title %}{% endblock %} - Oops nlp </title>
     <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/pygments.css">n
     <link rel="stylesheet" href="{{ url_for('static', filename=html_id_css)}}">
     <!-- <script src="../static/echarts.js"></script> -->
     <link type="image/png" sizes="96x96" rel="icon" href="../static/icon.png">
@@ -29,6 +32,7 @@
                 <li><a href="./ner" id="ner">Named Entity Recognition</a></li>
                 <li><a href="./re" id="re">Relation Extraction</a></li>
                 <li><a href="./kg" id="kg">Knowledge Graph</a></li>
+                <li><a href="./chat" id="chat">ChatGPT API</a></li>
             </ul>
         </div>
         <div class="img-head">

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>ChatGPT API Page</h1>
+<h2>点击后等待就行，目前页面做的不好，每次调用接口大概7s左右，可能更长</h2>
+
+<form method="post">
+    <input type="text" name="input_text_chat" class="input_submit" placeholder="{{input_text_chat}}">
+    <button type="submit" id="btn_search" name="btn" onclick="oops()" class="btn_submit">Oops 一下</button>
+    
+    <!-- <input type="button" name="" id="" value="OUTPUT" class="res_label"> -->
+    <!-- <div name="res_text_ner" id="" class="res_label">ENTITIES: </div> -->
+    <!-- <input type="text" name="res_text_ner" class="res_text" value="{{processed_text_ner}}" placeholder="embryonic stem cell"> -->
+    <!-- <input type="text" name="res_text_ner" class="res_text" value="<p>www</p>" placeholder="embryonic stem cell"> -->
+    <div name="res_text_chat" id="chat_res_div" class="res_text">{{processed_text_chat}}</div>
+    <div class="chat"><p>{{time_cost}}</p></div>
+    
+    
+</form>
+
+{% endblock %}

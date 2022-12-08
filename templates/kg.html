@@ -3,15 +3,15 @@
 {% block content %}
 <h1>KG Page</h1>
 <form method="post">
-  <input type="text" name="input_text_kg" class="input_submit" placeholder="例：我是大帅比">
-  <button type="submit" id="btn_search" name="btn" onclick="oops()" class="btn_submit">Oops 一下</button>
+  <input type="text" name="input_text_kg" class="input_submit" placeholder="例：输入">
+  <button type="submit" id="btn_search" name="btn" onclick="" class="btn_submit">Oops 一下</button>
 </form>
 <div id="main">
   <div id="mountNode" style="width: auto; height: auto;"></div>
   <div id="relatedInfo">
     <h3>Related Paper: </h3>
     <p>Paper 1</p>
-    <p>{{processed_text_re}}</p>
+    <input type="hidden" id="data" value="{{processed_text_kg}}">
   </div>
 </div>
 <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-4.2.3/dist/g6.min.js"></script>

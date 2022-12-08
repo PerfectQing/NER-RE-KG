@@ -75,9 +75,9 @@ def predict(sent):
     # print(valid_entities)
     # # print(preds[0][0], len(preds[0][0]))
     
-sent_sample = 'This is a very useful stem cell on our body.'
-sent_sample = 'Histone deacetylase activity required for embryonic stem cell differentiation .'
-print(predict(sent_sample))
+# sent_sample = 'This is a very useful stem cell on our body.'
+# sent_sample = 'Histone deacetylase activity required for embryonic stem cell differentiation .'
+# print(predict(sent_sample))
 # outputs = trainer.predict(test_dataset)
 
 
