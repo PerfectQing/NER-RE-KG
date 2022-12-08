@@ -18,3 +18,7 @@ Going...
 
 ## Oops once
 Currently, you can try this on http://43.142.185.222:8080/
+
+# ChatGPT
+update a api search for chatgpt api, just for fun.
+更新了chatgpt聊天接口，仅供娱乐
