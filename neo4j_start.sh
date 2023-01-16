@@ -1,0 +1,1 @@
+../../neo4j-community-5.2.0/bin/neo4j start

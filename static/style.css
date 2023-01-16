@@ -6,6 +6,11 @@
 
 body {
     background: gainsboro;
+    /* background: url('../static/Cool\ Sky.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* background: linear-gradient(to right, rebeccapurple, #008c8c); */
+    /* background: linear-gradient(to right,#333399,#ff00cc); */
     font-family: 'Times New Roman', Times, serif;
     width: 100%;
 }

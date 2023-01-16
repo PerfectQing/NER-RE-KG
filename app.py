@@ -121,7 +121,8 @@ def kg_process():
             with open('request_log.txt', 'a') as fa:
                 fa.write('-' * 20)
                 fa.write('\n' + remote_addr + '\n' + input_text_chat + '\n' + processed_text_chat + '\n')
-                fa.write(str(time.localtime()))
+                fa.write(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()))
+                fa.write('\n')
                 fa.write('-' * 20)
             print(remote_addr)
             print(input_text_chat)
@@ -135,7 +136,7 @@ def kg_process():
             md=markdown.Markdown(extensions=exts)
             processed_text_chat=md.convert(processed_text_chat)
             # print(processed_text_chat)
-            print(time.localtime())
+            print(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()))
             # processed_text_chat = Markup(html)
         else:
             print('Nothing input')

@@ -3,7 +3,6 @@ import openai
 
 def get_chat_gpt_response(prompt_text):
     # openai.api_key = os.getenv("")
-    print(read_api_key())
     openai.api_key = read_api_key()
     response = openai.Completion.create(
     model="text-davinci-003",
@@ -23,7 +22,7 @@ def read_api_key():
         line = fr.readline()
     return line.strip()
 
-print(read_api_key())
+# # print(read_api_key())
 # prompt_text = "写一个快速排序C++的代码"
 
 # print(get_chat_gpt_response(prompt_text))
